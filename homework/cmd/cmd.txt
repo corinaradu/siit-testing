@@ -1,0 +1,49 @@
+man command
+cd .. : move up one directory
+touch : creates a new file
+pwd : path
+ls: list
+ls -a: list hidden as well
+ls -l: ls long
+ls -t: ls ordered by time
+ls -alt: ls a+l+t
+cd: change dir
+mk dir: make dir
+cp 1.txt 2.txt: copy content of 1 into 2 files or dir
+cp * - select group of files (* = wildcards)
+mv: move si rename (mv batman.txt spiderman.txt)
+rm : remove
+rm -r: delete a directory and all of its child directories
+
+REdirects:
+
+echo "Hello" > hello.txt (se creaza fisierul hello.txt cu continutul "Hello")
+cat hello.txt - arata continutulu fisierului hello.txt
+
+> copy and replace
+>> copy and add
+
+cat volcanoes.txt | wc
+cat volcanoes.txt | wc
+wc - word count
+grep:  global regular expression print
+sed: find and replace
+
+https://corinaradu.tinytake.com/sf/MjA0ODMxMF82NDU2Nzk5mk
+
+mkdir /cygdrive/c/temp
+cd /cygdrive/c/temp
+touch counties.txt
+echo "brasov" >> counties.txt
+echo "prahova" >> counties.txt
+echo "buzau" >> counties.txt
+echo "mures" >> counties.txt
+echo "sibiu" >> counties.txt
+echo "covasna" >> counties.txt
+cat counties.txt
+cat counties.txt | sort > sorted-counties.txt
+cat sorted-counties.txt 
+mkdir /cygdrive/c/counties/
+cp /cygdrive/c/temp/sorted-counties.txt /cygdrive/c/counties
+ls /cygdrive/c/counties/
+history > /cygdrive/c/temp/history.txt

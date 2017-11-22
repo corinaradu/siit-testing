@@ -1,0 +1,6 @@
+brasov
+buzau
+covasna
+mures
+prahova
+sibiu

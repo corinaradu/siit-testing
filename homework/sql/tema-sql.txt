@@ -1,0 +1,50 @@
+-- 1.a: select all locations that have the capacity between 200 and 1000 persons
+SELECT * FROM Locations WHERE Capacity BETWEEN 200 AND 1000;
+
+-- 1.b: select all locations that have "a" in their name
+SELECT * FROM Locations WHERE LocationName LIKE '%a%';
+
+-- 1.c: Select all locations that are not in Cluj-Napoca
+SELECT * FROM Locations WHERE NOT City='Cluj-Napoca';
+
+-- 1.d: Select all locations that have the cost 0,500,600, are in Brasov and Cluj-Napoca, and han sustain a capacity greater that 1000 persons
+SELECT * FROM Locations WHERE COST IN (0, 500, 600) AND CITY IN ('Brasov', 'Cluj-Napoca') AND CAPACITY > 1000;
+SELECT * FROM Locations WHERE (COST='0' OR COST='500' or COST='600') AND (CITY = 'Brasov' OR CITY = 'Cluj-Napoca') AND (CAPACITY > 1000);
+
+-- 2.a: return the results for min, max, average based on "EventCost" column
+SELECT MAX(EventCost) FROM Events;
+SELECT MIN(EventCost) FROM Events;
+SELECT AVG(EventCost) FROM Events;
+
+-- *** 2.b: count how many events are associated to location 1 and 2
+-- in total
+SELECT COUNT(EVENTNAME) FROM Events WHERE LOCATIONID IN (1, 2);
+ -- by location
+SELECT LOCATIONID, COUNT(EVENTNAME) FROM Events WHERE LOCATIONID IN (1, 2) GROUP BY LOCATIONID;
+
+-- 2.c: compute the average cost obtained from location 1
+SELECT AVG(EVENTCOST) FROM Events WHERE LOCATIONID='1';
+
+-- 2.d:  order the events based on their defined date
+SELECT * FROM Events ORDER BY EVENTDATE;
+
+-- 2.e: compute the total cost associated with each location (hint grouped by)
+SELECT SUM(EVENTCOST), LOCATIONID FROM Events GROUP BY LOCATIONID;
+
+-- 3.a: Order location name, descending, after their associated event cost
+SELECT l.LOCATIONNAME, e.EVENTCOST FROM Locations l 
+JOIN events e on l.LOCATIONID = e.LOCATIONID ORDER BY e.EVENTCOST DESC;
+
+-- 3.b: Select location name, location cost and event cost for a specific event
+SELECT l.LOCATIONNAME, l.COST, e.EVENTCOST FROM Locations l 
+JOIN events e on l.LOCATIONID = e.LOCATIONID WHERE e.EVENTID = 5;
+
+-- 3.c: Return the first 3 events (with eventName, locationname), that have the greatest event cost, in alphabetical order (after their names)
+SELECT e.EVENTNAME, l.LOCATIONNAME, e.EVENTCOST FROM Locations l 
+JOIN events e on l.LOCATIONID = e.LOCATIONID
+WHERE e.EVENTID IN (
+    SELECT EVENTID FROM events ORDER BY EVENTCOST DESC FETCH NEXT 3 ROWS ONLY
+)
+ORDER BY e.EVENTNAME ASC;
+
+

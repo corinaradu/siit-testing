@@ -1,0 +1,19 @@
+User Interface Testing 
+
+
+focusul este pe design, se incearca identificarea defectelor folosind Grapghical user interface. (GUi= ce vede utilizatorul). se are in vedere interactiunea userului cu aplicatia
+Manual dar preferabil automat, dinamic, functional black box type
+
+
+testarea se face din punctul de vedere al user-ului, trebuie sa ne asiguram ca asteptarile userului coincid cu actual results - meniurile merg, se intampla ceva la click, butoane functionale, fieldurile formularelor au formatul corect. linkuri care merg
+ 
+ - se folosesc mai degraba imagini decat text
+aplicatia tre sa fie usor de folosit si userul  obtine usor ce cauta
+
+automat cu record and replay
+
+se testeaza pe diferite browsere la toate rezolutile, pe cat mai multe device-uri
+
+
+the user must not get frustrated while using the system interface
+Testing whether the interface is attractive or not.

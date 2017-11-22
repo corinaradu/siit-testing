@@ -1,0 +1,15 @@
+Shopping cart: No information message is displayed when removing an item from shopping cart	
+Shopping Cart: Quantity above 99 jumps to 99	
+Allows to enter alphabetical or special characters in the quantity field	
+licking the "Back" button of the browser, removes the added items from the Shopping Bag	
+
+
+
+log in log out.. the cart is not updates
+
+1. not integer numbers are accepted in the quatity fied
+
+
+Nu ma pot conecta prin contul de Facebook.Pe net mi spune "eroare la server" când vreau sa modific parola.
+Utila ?i merge cu condi?ia sa ai ecranul curat oglinda ???? fara pete de amprente, grasime ?i alte minuna?ii?? altfel nu-l cite?te scannerul ??
+O aplicatie care probabil imi face e economie pe luna de cel putin 50 ron

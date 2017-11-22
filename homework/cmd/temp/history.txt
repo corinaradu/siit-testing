@@ -1,0 +1,16 @@
+    1  mkdir /cygdrive/c/temp
+    2  cd /cygdrive/c/temp
+    3  touch counties.txt
+    4  echo "brasov" >> counties.txt
+    5  echo "prahova" >> counties.txt
+    6  echo "buzau" >> counties.txt
+    7  echo "mures" >> counties.txt
+    8  echo "sibiu" >> counties.txt
+    9  echo "covasna" >> counties.txt
+   10  cat counties.txt
+   11  cat counties.txt | sort > sorted-counties.txt
+   12  cat sorted-counties.txt
+   13  mkdir /cygdrive/c/counties/
+   14  cp sorted-counties.txt /cygdrive/c/counties/
+   15  ls /cygdrive/c/counties/
+   16  history > /cygdrive/c/temp/history.txt

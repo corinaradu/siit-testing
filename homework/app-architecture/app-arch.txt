@@ -1,0 +1,38 @@
+Homepage
+
+Headers: Remote Address:91.198.174.192:443 (Wikipedia IP address), content-type:text/html 
+cookies: 4 cookies (CP, GeoIP, WMF-Last-Access, WMF-Last-Access-Global) expire on 22 Dec 2017 12:00:00 GMT 
+session
+request type GET
+response code: 307  internal Temporary redirect from http://wikipedia.org to https://wikipedia.org 
+301 Permanently Redirect from https://wikipedia.org to https://www.wikipedia.org/
+200 - The request has succeeded
+response message - same as Preview (html code)
+parameters: none
+
+
+Invalid register
+
+Headers: Request URL: https://ro.wikipedia.org/w/index.php?title=Special:%C3%8Enregistrare&returnto=Pagina+principal%C4%83 (title:Special:Înregistrare
+returnto:Pagina principala)
+	Status Code:200, Remote Address:91.198.174.192:443 (Wikipedia IP address), content-type: text/html
+cookies: 4 cookies (CP, GeoIP, WMF-Last-Access, WMF-Last-Access-Global) + 2  (forceHTTPS, rowikisession)
+session
+request type POST
+response code: 200
+response message - same as Preview (html code)
+parameters: the values from the register form fiels
+age:0- the page is not cached
+
+
+Valid register
+
+Headers: Request URL: https://ro.wikipedia.org/w/index.php?title=Special:%C3%8Enregistrare&returnto=Pagina+principal%C4%83
+	Status Code:200, Remote Address:91.198.174.192:443 (Wikipedia IP address), content-type: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+cookies: 4 cookies (CP, GeoIP, WMF-Last-Access, WMF-Last-Access-Global) + 2  (forceHTTPS, rowikisession)
+session
+request type POST
+response code: 200
+response message - same as Preview (html code)
+parameters: the values from the register form fiels
+age:0- the page is not cached
