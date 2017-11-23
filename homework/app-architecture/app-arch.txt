@@ -13,9 +13,14 @@ parameters: none
 
 Invalid register
 
+9 requests, 117 KB transferred
+
+Request starts with the http method, the path and the version of HTTP protocol
+Method: Get (The client asks the server to send the landing page for http://wikipedia.org)
 Headers: Request URL: https://ro.wikipedia.org/w/index.php?title=Special:%C3%8Enregistrare&returnto=Pagina+principal%C4%83 (title:Special:Înregistrare
 returnto:Pagina principala)
-	Status Code:200, Remote Address:91.198.174.192:443 (Wikipedia IP address), content-type: text/html
+	Status Code:200, Remote Address:91.198.174.192:443 (Wikipedia IP address)
+content-type: text/html
 cookies: 4 cookies (CP, GeoIP, WMF-Last-Access, WMF-Last-Access-Global) + 2  (forceHTTPS, rowikisession)
 session
 request type POST
@@ -23,6 +28,7 @@ response code: 200
 response message - same as Preview (html code)
 parameters: the values from the register form fiels
 age:0- the page is not cached
+Timing TTFB: 36.85ms (waiting period -Time to first Byte)
 
 
 Valid register
@@ -31,8 +37,11 @@ Headers: Request URL: https://ro.wikipedia.org/w/index.php?title=Special:%C3%8En
 	Status Code:200, Remote Address:91.198.174.192:443 (Wikipedia IP address), content-type: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
 cookies: 4 cookies (CP, GeoIP, WMF-Last-Access, WMF-Last-Access-Global) + 2  (forceHTTPS, rowikisession)
 session
-request type POST
+request type POST (the client sends data about a form submission)
 response code: 200
 response message - same as Preview (html code)
 parameters: the values from the register form fiels
 age:0- the page is not cached
+
+
+content-length: how many bytes of the data are expected 
