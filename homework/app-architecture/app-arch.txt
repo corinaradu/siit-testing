@@ -1,21 +1,17 @@
 Homepage
 
-Headers: Remote Address:91.198.174.192:443 (Wikipedia IP address), content-type:text/html 
-cookies: 4 cookies (CP, GeoIP, WMF-Last-Access, WMF-Last-Access-Global) expire on 22 Dec 2017 12:00:00 GMT 
-session
-request type GET
-response code: 307  internal Temporary redirect from http://wikipedia.org to https://wikipedia.org 
-301 Permanently Redirect from https://wikipedia.org to https://www.wikipedia.org/
-200 - The request has succeeded
-response message - same as Preview (html code)
-parameters: none
+When the user accesses the http://wikipedia.org address with a web browser, the client initiates 9 requests to the web server and 130 KB are being transferred. The first request code is 307 which means that an internal temporary redirect is implememted from http://wikipedia.org to https://wikipedia.org (this is the second requested URL https://corinaradu.tinytake.com/sf/MjE0MDI3MV82Njc5NjEz). The code for the second request is 301- so the link is permanently redirected to https://www.wikipedia.org/. https://corinaradu.tinytake.com/sf/MjE0MDI4NV82Njc5NjQ2  
+Now, the status code is 200 so the request has succeeded. 
+DNS converts name to IP https://corinaradu.tinytake.com/sf/MjE0MDMwMF82Njc5Njcx. The client asks the server to send the landing page using the GET method. 
+Then web server returns HTML data stream  and returns the result to the client web browser for display. When all the requests are met, the sequence is complete and the web browser formats the response and displays the web page.
 
 
 Invalid register
 
-9 requests, 117 KB transferred
+When trying to register a new username by providing invalid data in the fields, the client initiates multiple requests. Using the Post method, the client sends data about a form submission. https://corinaradu.tinytake.com/sf/MjE0MDMyOF82Njc5Nzgx 
+The server returns an HTML response and the browser formats and displays the response.
 
-Request starts with the http method, the path and the version of HTTP protocol
+Request starts with the https schema, the path and the version of HTTP protocol
 Method: Get (The client asks the server to send the landing page for http://wikipedia.org)
 Headers: Request URL: https://ro.wikipedia.org/w/index.php?title=Special:%C3%8Enregistrare&returnto=Pagina+principal%C4%83 (title:Special:Înregistrare
 returnto:Pagina principala)
@@ -37,7 +33,7 @@ Headers: Request URL: https://ro.wikipedia.org/w/index.php?title=Special:%C3%8En
 	Status Code:200, Remote Address:91.198.174.192:443 (Wikipedia IP address), content-type: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
 cookies: 4 cookies (CP, GeoIP, WMF-Last-Access, WMF-Last-Access-Global) + 2  (forceHTTPS, rowikisession)
 session
-request type POST (the client sends data about a form submission)
+9request type POST (the client sends data about a form submission)
 response code: 200
 response message - same as Preview (html code)
 parameters: the values from the register form fiels
@@ -45,3 +41,8 @@ age:0- the page is not cached
 
 
 content-length: how many bytes of the data are expected 
+
+
+
+The customer's login credentials may be stored in a database, and the web server accesses the database server as a client. An application server interprets the returned data and provides the output to the web server.
+
