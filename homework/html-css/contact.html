@@ -1,0 +1,144 @@
+<html>
+<head>
+	<title>Contact Keeper</title>
+
+	<style>
+		div {
+			padding: 5px;
+		}
+
+		#container {
+			background-color: #EEEEFF;
+			width: 800px;
+			height: 500px;
+			margin: 50px auto;
+			padding: 0;
+			border-radius: 8px;
+			border: 2px solid #424242;
+		}
+
+		#header {
+			background-color: #424242;
+			color: #FFFFFF;
+			border-top-left-radius: 8px;
+			border-top-right-radius: 8px;
+		}
+
+		#header a {
+			color: #CCCCCC;
+		}
+
+		#menu {
+			width: 33%;
+			float: left;
+			height: 240px;
+
+		}
+
+		#editor {
+			width: 60%;
+			float: right;
+			height: 240px;
+
+		}
+
+		#list {
+		}
+
+		#footer {
+
+		}
+
+		input[type="radio"]:disabled {
+			font-style: italic;
+		}
+
+
+
+	</style>
+
+</head>
+<body>
+
+	<div id="container">
+		<div id="header">
+			<h3><span style="float: left;">ContactKeeper Online</span></h3>
+			<span style="float: right;">Press <a href="Files/help.html">here</a> for help</span>
+			<div style="clear: both;"></div>
+		</div>
+		<div  id="content">
+			<p>My name is Corina Radu, contact me at <a href="mailto:corinaradu12@gmail.com">corinaradu12@gmail.com</a></p>
+			<p>Here is my cat:</a></p>
+            <img src="cat.jpg" alt="Cat" style="height:250px; width: 250px " />
+			<div id="editor">
+
+			</div>
+			<div style="clear: both;"></div>
+
+
+		</div>
+		<div id="footer">
+			<a href="http://www.scoalainformala.ro" title="Scoala Informala" target="_blank">www.scoalainformala.ro</a>
+		</div>
+	</div>
+
+</body>
+
+<script>
+	contactList = [];
+
+	function SaveContact() {
+
+		var contact = {};
+
+		contact.firstName = document.getElementById("first_name").value;
+		contact.lastName = document.getElementById("last_name").value;
+		contact.phone = document.getElementById("phone").value;
+		contact.day = document.getElementById("day").value;
+		contact.month = document.getElementById("month").value;
+		contact.year = document.getElementById("year").value;
+
+		if (document.getElementById("menu1").checked == true) {
+			contactList.push(contact);
+		}
+
+		if (document.getElementById("menu3").checked == true) {
+			contactList.pop();
+		}
+
+		CleanupContact();
+	}
+
+	function RefreshContact() {
+		document.getElementById("data").innerHTML = ""; // golim lista
+
+		var items = "";
+		for (var i = 0; i < contactList.length; i++) {
+			items = items + "<li>" + contactList[i].firstName + " " + contactList[i].lastName + "</li>";
+		}
+		document.getElementById("data").innerHTML = items;
+	}
+
+	function CleanupContact() {
+
+		document.getElementById("first_name").value = "";
+		document.getElementById("last_name").value = "";
+		document.getElementById("phone").value = "";
+		document.getElementById("day").value = "";
+		document.getElementById("month").value = "";
+		document.getElementById("year").value = "";
+	}
+
+	function AddMode() {
+		document.getElementById("save").value = "Save";
+	}
+
+	function DeleteMode() {
+		document.getElementById("save").value = "Delete";
+	}
+
+
+</script>
+
+
+</html>
