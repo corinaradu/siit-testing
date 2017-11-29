@@ -3,6 +3,10 @@
 	<title>Contact Keeper</title>
 
 	<style>
+		body, table {
+			color: blue;
+		}
+
 		div {
 			padding: 5px;
 		}
@@ -53,6 +57,13 @@
 			font-style: italic;
 		}
 
+		input, select {
+			color: blue;
+		}
+
+		input[type="button"] {
+			background-color: yellow;
+		}
 
 
 	</style>
@@ -66,18 +77,18 @@
 			<span style="float: right;">Press <a href="Files/help.html">here</a> for help</span>
 			<div style="clear: both;"></div>
 		</div>
-		<div style="color: red !important;" id="content">
+		<div id="content">
 			<p>This is an online application for contacts.</p>
 			<div id="menu">
 				<input type="radio" onchange="AddMode();" name="menu_group" id="menu1" value="Add" checked>Add contact</input><br>
 				<input type="radio" name="menu_group" id="menu2" value="Update">Update contact</input><br>
 				<input type="radio" onchange="DeleteMode();" name="menu_group" id="menu3" value="Delete">Delete contact</input><br><br><br>
-				<input type="button" onclick="RefreshContact();" value="Show or Refresh contact list" />
+				<input type="button" onclick="RefreshContact();" title="Show or Refresh contact list" value="Show/Refresh" />
 			</div>
 			<div id="editor">
             <form>
                 <fieldset>
-                <legend>Contact</legend>
+                	<legend>Contact</legend>
                     <table>
                         <tr>
                             <td>
@@ -97,7 +108,7 @@
                         </tr>
                         <tr>
                             <td>
-                                Gender:
+								<label for="gender">Gender:</label>
                             </td>
                             <td>
                                 <select name="gender" id="gender">
@@ -119,7 +130,7 @@
                                 <label for="email">Email</label>
                             </td>
                             <td>
-                                <input type="text" id="email" placeholder="Email" >
+                                <input type="email" id="email" placeholder="Email" >
                             </td>
                         </tr>
                         <tr>
@@ -149,7 +160,7 @@
                             <td>
                             </td>
                             <td style="text-align: right;">
-                                <input type="button" id="save" onclick="SaveContact();RefreshContact();" value="Save contact" />
+                                <input type="button" id="save" onclick="SaveContact();RefreshContact();" title="Save contact" value="Save"/>
                             </td>
                         </tr>
                     </table>

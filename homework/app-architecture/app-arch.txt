@@ -44,5 +44,7 @@ content-length: how many bytes of the data are expected
 
 
 
+When trying to register a new username by providing invalid data in the form fields, the client initiates multiple requests. Using the POST method, the client sends data about a form submission.  The status code is 200 so the request is succesfull. 
+
 The customer's login credentials may be stored in a database, and the web server accesses the database server as a client. An application server interprets the returned data and provides the output to the web server.
 
