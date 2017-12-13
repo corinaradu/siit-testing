@@ -1,254 +1,41 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Contact Keeper</title>
-	
-	<style>
-		/* din motive de ranking, castiga selectorul care aduna mai multe puncte */
-
-		/* 100 + 10 + 1 = 111 */
-		p#p1.para {
-			color: blue;
-		}
-		
-		/* 100 + 10 = 110 */
-		#p1.para {
-			color: red;
-		}
-		
-		/* 100 */
-		#para {
-			color: yellow;
-		}
-				
-		div {
-			padding: 5px;
-		}
-	
-		#container {
-			background-color: #EEEEFF; 
-			width: 800px; 
-			height: 500px;
-			margin: 50px auto;		
-			padding: 0;
-			border-radius: 8px;
-			border: 2px solid #424242; 
-		}
-		
-		#header {
-			background-color: #424242;
-			color: #FFFFFF;
-			border-top-left-radius: 8px;
-			border-top-right-radius: 8px;
-		}
-		
-		#header a {
-			color: #CCCCCC;
-		}
-		
-		#menu {
-			width: 33%;
-			float: left;
-			height: 240px;
-		
-		}
-
-		#editor {
-			width: 60%;
-			float: right;
-			height: 240px;
-			
-		}
-		
-		#list {
-		}
-		
-		#footer {
-			
-		}
-		
-		input[type="radio"]:disabled {
-			font-style: italic; 
-		}
-		
-		
-		
-	</style>
-	
+    <meta charset="UTF-8">
+    <title>Lectia 14 :: Problema 3</title>
 </head>
 <body>
+    <script>
+        /*
+            1. Given an array of integer numbers, compute how many values from the array are odd and how many of them are even.
+        */
 
-	<div id="container">
-		<div id="header">
-			<h3><span style="float: left;">ContactKeeper Online</span></h3>
-			<span style="float: right;">Press <a href="Files/help.html">here</a> for help</span>
-			<div style="clear: both;"></div>
-		</div>
-		<div id="content">
-			<p id="p1" class="para">This is an online application for contacts.</p>
-			<div id="menu">
-				<input type="radio" onchange="AddMode();" name="menu_group" id="menu1" value="Add" checked>Add contact</input><br>
-				<input type="radio" name="menu_group" id="menu2" value="Update">Update contact</input><br>
-				<input type="radio" onchange="DeleteMode();" name="menu_group" id="menu3" value="Delete">Delete contact</input><br><br><br>
-				<input type="button" onclick="RefreshContact();" value="Show/Refresh" />
-			</div>
-			<div id="editor">
-				<table>
-					<tr>
-						<td>
-							First name:
-						</td>
-						<td>
-							<input type="text" id="first_name" placeholder="introduceti prenumele" value="John" >
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Last name:
-						</td>
-						<td>
-							<input type="text" id="last_name" placeholder="introduceti numele" >
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Phone:
-						</td>
-						<td>
-							<input type="text" id="phone" placeholder="0000-000-000" >
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Birth date:
-						</td>
-						<td>
-							<input type="number" id="day" min="1" max="31" value="1" />
-							<select id="month">
-								<option value="1">Jan</option>
-								<option value="2">Feb</option>
-								<option value="3">Mar</option>
-								<option value="4">Apr</option>
-								<option value="5">May</option>
-								<option value="6">Jun</option>
-								<option value="7">Jul</option>
-								<option value="8">Aug</option>
-								<option value="9">Sep</option>
-								<option value="10">Oct</option>
-								<option value="11">Nov</option>
-								<option value="12">Dec</option>
-							</select>
-							<input type="number" id="year" min="1950" max="2016" value="1990" />
-						</td>
-					</tr>
-					<tr>
-						<td>
-						</td>
-						<td style="text-align: right;">
-							<input type="button" id="save" onclick="SaveContact();RefreshContact();" value="Save" />
-						</td>
-					</tr>
-				</table>
-				
-			</div>
-			<div style="clear: both;">
-			</div>
-			<div id="list">
-				<ul id="data">
-					<li>niciun contact</li>
-				</ul>
-			</div>
-			
-		</div>
-		<div id="footer">
-			<a href="http://www.scoalainformala.ro" title="Scoala Informala" target="_blank">www.scoalainformala.ro</a>
-		</div>
-	</div>
+        var numbers = [1, 4, 7, 11, 12];
+        var numbersLength = numbers.length;
+        var evenValues = 0;
+        var oddValues = 0;
 
+        for (i = 0; i < numbersLength; i++) {
+            if (numbers[i] % 2 == 0) {
+                evenValues++;
+            }
+            else {
+                oddValues++;
+            }
+        }
+
+        console.log('Odd values: ' + oddValues + '\n' + 'Even values: ' + evenValues);
+
+         /*
+             2. Write a function that will take two strings as parameters and will return their concatenation, with a space between it, all in upper case.
+        */
+
+        function phrase(string1, string2) {
+            return (string1 + ' ' + string2).toUpperCase();
+        }
+
+         console.log(phrase('hello', 'world'));
+
+    </script>
 </body>
-
-<script>
-	contactList = [];
-	
-	
-		
-	function ShowFirstName() {
-		//if (document.getElementById("first_name").value.length == 0) {
-		//	alert("Completati campurile");
-		//}
-		//else {
-		//	alert("First name este: " + document.getElementById("first_name").value);
-		//}
-		
-		var str = document.getElementById("first_name").value;
-		
-		// pentru a afisa first_name litera cu litera prin while dezactivati liniile urmatoare
-		//var i = 0;
-		//while (i < str.length) {
-		//	alert(str[i]);
-		//	i = i + 1;
-		//}
-		
-		// pentru a afisa first_name litera cu litera prin for dezactivati liniile urmatoare
-		//for (var j = 0; j < str.length; j++) {
-		//	alert(str[j]);
-		//}
-	}
-	
-	
-	function SaveContact() {
-		
-		var contact = {};
-		
-		contact.firstName = document.getElementById("first_name").value;
-		contact.lastName = document.getElementById("last_name").value;
-		contact.phone = document.getElementById("phone").value;
-		contact.day = document.getElementById("day").value;
-		contact.month = document.getElementById("month").value;
-		contact.year = document.getElementById("year").value;
-	
-		if (document.getElementById("menu1").checked == true) {
-			contactList.push(contact);
-		}
-		
-		if (document.getElementById("menu3").checked == true) {
-			contactList.pop();
-		}
-		
-		CleanupContact();
-	}
-	
-	function RefreshContact() {
-		document.getElementById("data").innerHTML = ""; // golim lista
-		
-		var items = "";
-		for (var i = 0; i < contactList.length; i++) {
-			items = items + "<li>" + contactList[i].firstName + " " + contactList[i].lastName + "</li>";
-		}
-		document.getElementById("data").innerHTML = items;
-	
-		ShowFirstName();
-	}
-	
-	function CleanupContact() {
-
-		document.getElementById("first_name").value = "";
-		document.getElementById("last_name").value = "";
-		document.getElementById("phone").value = "";
-		document.getElementById("day").value = "";
-		document.getElementById("month").value = "";
-		document.getElementById("year").value = "";
-	}
-	
-	function AddMode() {
-		document.getElementById("save").value = "Save";
-	}
-	
-	function DeleteMode() {
-		document.getElementById("save").value = "Delete";
-	}
-	
-
-</script>
-
-
 </html>
