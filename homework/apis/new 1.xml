@@ -1,0 +1,11 @@
+<wheather>	
+	<request>
+		<location>Brasov</location>
+		<date>16.12.2017</date>
+	</request>
+	<response>
+		<temperature>10</temperature>
+		<humidity>50</humidity>
+		<windspeed>12</windspeed>
+	</response>
+</wheather>	

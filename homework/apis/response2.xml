@@ -1,0 +1,13 @@
+{	
+	"response": {
+		"temperature": 10,
+		"humidity": 50,
+		"windspeed": 12
+	}
+}	
+
+https://maps.googleapis.com/maps/api/timezone/json?location=38.908133,-77.047119&timestamp=1458000000&key=YOUR_API_KEY
+
+https://maps.googleapis.com/maps/api/timezone/json?location=38.908133,-77.047119&timestamp=1458000000&key=AIzaSyAmtUVfUDmvcNEynPodopng1IQyDYo4foA
+
+https://maps.googleapis.com/maps/api/timezone/json?location=48.908133,-77.047119&timestamp=1458000000
