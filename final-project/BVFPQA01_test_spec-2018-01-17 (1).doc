@@ -1,0 +1,671 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>testspec BVQA01 Final Project S16 - Smoke test virtual cards</title>
+<link type="text/css" rel="stylesheet" href="https://testlink.scoalainformala.ro/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo" height="53" src="https://testlink.scoalainformala.ro/gui/themes/default/images/tl-logo-transparent-25.png" /></div>
+<div class="doc_title"><p>Test Specification</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: BVQA01 Final Project S16<br>Test Suite: BVQA01 Final Project S16 - Smoke test virtual cards</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 17/01/2018</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><b><p style="padding-left: 20px;"><a href="#toc_1">1.Smoke test virtual cards</a></p></b>
+<b><p style="padding-left: 30px;"><a href="#toc_1_1">1.1.Installation</a></p></b>
+<p style="padding-left: 60px;"><a href="#toc_tc130800">BVFPQA01-51: Install the Virtual Cards app</a></p><b><p style="padding-left: 30px;"><a href="#toc_1_2">1.2.User experience</a></p></b>
+<p style="padding-left: 60px;"><a href="#toc_tc130806">BVFPQA01-52: User can receive/reject voice calls while the app is running</a></p><p style="padding-left: 60px;"><a href="#toc_tc130811">BVFPQA01-53: User can receive sms while the app is running</a></p><p style="padding-left: 60px;"><a href="#toc_tc130820">BVFPQA01-54: Check the main menu, layout, links, exit application</a></p><p style="padding-left: 60px;"><a href="#toc_tc130951">BVFPQA01-70: Behaviour of the app while losing the internet connection</a></p><b><p style="padding-left: 30px;"><a href="#toc_1_3">1.3.Create account</a></p></b>
+<p style="padding-left: 60px;"><a href="#toc_tc130830">BVFPQA01-55: Create account with valid credentials</a></p><p style="padding-left: 60px;"><a href="#toc_tc130835">BVFPQA01-56: Mandatory fields</a></p><p style="padding-left: 60px;"><a href="#toc_tc130839">BVFPQA01-57: Create account with invalid credentials</a></p><b><p style="padding-left: 30px;"><a href="#toc_1_4">1.4.Log in</a></p></b>
+<p style="padding-left: 60px;"><a href="#toc_tc130845">BVFPQA01-58: Log in using valid credentials</a></p><p style="padding-left: 60px;"><a href="#toc_tc130850">BVFPQA01-59: Mandatory fields</a></p><p style="padding-left: 60px;"><a href="#toc_tc130855">BVFPQA01-60: Log in  using invalid credentials</a></p><p style="padding-left: 60px;"><a href="#toc_tc130860">BVFPQA01-61: Log out</a></p><b><p style="padding-left: 30px;"><a href="#toc_1_5">1.5.Add cards</a></p></b>
+<p style="padding-left: 60px;"><a href="#toc_tc130908">BVFPQA01-62: Add existing plastic card by scanning the barcode</a></p><p style="padding-left: 60px;"><a href="#toc_tc130915">BVFPQA01-63: Add virtual card using valid data</a></p><p style="padding-left: 60px;"><a href="#toc_tc130920">BVFPQA01-64: Mandatory fields</a></p><b><p style="padding-left: 30px;"><a href="#toc_1_6">1.6.Remove card</a></p></b>
+<p style="padding-left: 60px;"><a href="#toc_tc130926">BVFPQA01-65: Remove a previously saved card</a></p><b><p style="padding-left: 30px;"><a href="#toc_1_7">1.7.Search card</a></p></b>
+<p style="padding-left: 60px;"><a href="#toc_tc130933">BVFPQA01-66: Search card using the alphabet anchors</a></p><p style="padding-left: 60px;"><a href="#toc_tc130937">BVFPQA01-67: Search field in the 'Add card' section</a></p><p style="padding-left: 60px;"><a href="#toc_tc130942">BVFPQA01-68: Search functionality in the saved cards section</a></p><b><p style="padding-left: 30px;"><a href="#toc_1_8">1.8.Uninstall</a></p></b>
+<p style="padding-left: 60px;"><a href="#toc_tc130947">BVFPQA01-69: Uninstall Virtual Cards</a></p></div><h1 class="doclevel" >Scope</h1>
+<div class="txtlevel"><p>
+	Final Project Test Cases for BV QA01</p></div>
+ <br/><a name='toc_'></a>
+<h1 class='doclevel'>1.Test Suite : Smoke test virtual cards</h1>
+<a name='toc_'></a>
+<h2 class='doclevel'>1.1.Test Suite : Installation</h2>
+<div><p>
+	Check if the application can be downloaded from the Store</p>
+</div><a name="toc_tc130800"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-51: Install the Virtual Cards app&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Check if the application can be downloaded from the Store</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	Internet connection&nbsp;</div>
+<div>
+	Smartphone with valid SIM card</div>
+<div>
+	&nbsp;</div>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Open Google Play Store and in the Search field enter Virtual Cards</p>
+</td><td><p>
+	Virtual Cards app is available in the search result</p>
+<p>
+	Install button and description&nbsp; are available</p>
+</td></tr><tr><td width="5">2</td><td><p>
+	Click on &#39;Install&#39;</p>
+</td><td><p>
+	The installation of the application should be done smoothly in a reasonable amount of time</p>
+<p>
+	Application logo is present in Application Manager and the user can select it.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h2 class='doclevel'>1.2.Test Suite : User experience</h2>
+<div><p>
+	Navigation between relevant modules in the application works properly</p>
+<p>
+	Phone&#39;s functionalities work properly while the app is running</p>
+<p>
+	UI should be perfect</p>
+</div><a name="toc_tc130806"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-52: User can receive/reject voice calls while the app is running&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Verify that the user is able to receive/reject voice calls while the app is running</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	One phone with valid SIM card on which the app is installed</p>
+<p>
+	One phones having valid SIM card</p>
+<p>
+	&nbsp;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Open Virtual Cards</p>
+</td><td><p>
+	The app is opening</p>
+</td></tr><tr><td width="5">2</td><td><p>
+	Using another device, call the phone number on which the app is running</p>
+</td><td><p>
+	The application is minimized whenever there is an incoming phone call.</p>
+<p>
+	User can answer/reject the phone call</p>
+</td></tr><tr><td width="5">3</td><td><p>
+	Answer the phone call&nbsp;</p>
+</td><td><p>
+	The application is minimized or suspended on the event of a call&nbsp;</p>
+</td></tr><tr><td width="5">4</td><td><p>
+	End the phone call</p>
+</td><td><p>
+	Whenever the call stops, the application is resumed</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc130811"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-53: User can receive sms while the app is running&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Verify that the user is able to receive sms while the app is running</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	One phone with valid SIM card on which Virtual \cards is installed</p>
+<p>
+	One phone with valid SIM card</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Open Virtual Card app</p>
+</td><td><p>
+	The Virtual Cards app is opening</p>
+</td></tr><tr><td width="5">2</td><td><p>
+	Go to any page except homepage (e.g. Log in section)</p>
+</td><td><p>
+	The new page is opened</p>
+</td></tr><tr><td width="5">3</td><td><p>
+	From another device send an sms (random text)</p>
+</td><td><p>
+	The sms is received</p>
+<p>
+	The app is not minimized&nbsp;</p>
+</td></tr><tr><td width="5">4</td><td><p>
+	Acces &#39;Messages&#39; section and read the received sms</p>
+</td><td><p>
+	The application is minimized or suspended when the user accesses &#39;Messages&#39; section</p>
+</td></tr><tr><td width="5">5</td><td><p>
+	Access Virtual Cards</p>
+</td><td><p>
+	The application is resumed back from the same point (e.g. Log in page) when the user&nbsp;accesses Virtual cards app again</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc130820"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-54: Check the main menu, layout, links, exit application&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Functional navigation for main sectons, reasonable load duration, clear layout</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	Smartphones on which the Virtual cards is installed</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Open Virtual Cards app</p>
+</td><td><div>
+	The layout looks good on different devices</div>
+<div>
+	The text is easy to read</div>
+<div>
+	No spelling or grammar error</div>
+<div>
+	No mixted languages</div>
+<div>
+	Application does not consume battery excessively</div>
+</td></tr><tr><td width="5">2</td><td><p>
+	Select &#39;Add card&#39;</p>
+</td><td><p>
+	&#39;Add card&#39; window is dsplayed</p>
+</td></tr><tr><td width="5">3</td><td><p>
+	From the main menu, click on &#39;Create account&#39;</p>
+</td><td><p>
+	&#39;Create account&#39; page is opened</p>
+</td></tr><tr><td width="5">4</td><td><p>
+	Go back to homepge</p>
+</td><td><p>
+	The application provides a method for going back or undoing an action</p>
+</td></tr><tr><td width="5">5</td><td><p>
+	From the main menu, click on &#39;Log in&#39; option</p>
+</td><td><p>
+	&#39;Log in&#39; page opens</p>
+</td></tr><tr><td width="5">6</td><td><p>
+	Exit &#39;Virtual cards&#39; app</p>
+</td><td><p>
+	The application provides a method to exit the app</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc130951"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-70: Behaviour of the app while losing the internet connection&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Check the behaviour of the app while losing the internet connection&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	User must have an account</p>
+<p>
+	One plastic loyalty card</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Open Virtual cards</p>
+</td><td><p>
+	Virtual&nbsp; Card is opened</p>
+<p>
+	&nbsp;</p>
+</td></tr><tr><td width="5">2</td><td><p>
+	Go offline by swiching off the internet connection, then go to the &#39;Cards&#39; section</p>
+</td><td><p>
+	The user should be able to see the previously saved cards, edit and detele cards</p>
+</td></tr><tr><td width="5">3</td><td><p>
+	Go to &#39;Add Card&#39; and try to add a loyalty card by scanning it</p>
+</td><td><p>
+	The card is added</p>
+</td></tr><tr><td width="5">4</td><td><p>
+	Go to Log in section and fill in the the form with valid data</p>
+</td><td><p>
+	Error message regarding the internet coonection</p>
+<p>
+	User is not logged in</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h2 class='doclevel'>1.3.Test Suite : Create account</h2>
+<div><p>
+	Test the &#39;New account&#39; form</p>
+</div><a name="toc_tc130830"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-55: Create account with valid credentials&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Check if the user can register with valid credentials</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	Virtual cards app is installed</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Open Virtual Cards</p>
+</td><td><p>
+	Virtual cards is opened</p>
+</td></tr><tr><td width="5">2</td><td><p>
+	From the hamburger menu, select &#39;Create account&#39;</p>
+</td><td><p>
+	&#39;Create account&#39; page opens</p>
+</td></tr><tr><td width="5">3</td><td><div>
+	Enter valid data in the form&nbsp;</div>
+<div>
+	Surname and first name: Corina Radu</div>
+<div>
+	Email: corinaradu12@gmail.com</div>
+<div>
+	Password: Pass1234</div>
+<div>
+	Confirm Password: Pass1234</div>
+<div>
+	Check &#39;I agree with terms and conditions&#39;</div>
+<div>
+	Click on &#39;Create account&#39;</div>
+</td><td><p>
+	Confirmation message</p>
+<p>
+	The user should be able to create new account without encountering any errors</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc130835"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-56: Mandatory fields&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Check the behaviour of mandatory fields by leaving them empty</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Access the &#39;Create account&#39; section</p>
+</td><td><p>
+	&#39;New account&#39; form is available</p>
+</td></tr><tr><td width="5">2</td><td><p>
+	Leave the fields empty and click on &#39;Create account&#39;</p>
+</td><td><div>
+	Error message regarding the mandatory fields</div>
+<div>
+	Mandatory fields are displayed in a distinctive way than the non-mandatory fields</div>
+<div>
+	New account not created</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc130839"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-57: Create account with invalid credentials&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Check if the user can register with invalid credentials</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	Internet connection</p>
+<p>
+	Virtual card is installed</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Open Virtual Cards</p>
+</td><td><p>
+	Virtaul cards is opened</p>
+</td></tr><tr><td width="5">2</td><td><p>
+	From the hamburger menu, select &#39;Create account&#39;</p>
+</td><td><p>
+	&#39;Create account&#39; page is opened</p>
+</td></tr><tr><td width="5">3</td><td><p>
+	Complete the form&nbsp; with invalid data:</p>
+<div>
+	Surname and first name: Ana</div>
+<div>
+	Email: corinaradu12.@gmail.com</div>
+<div>
+	Password: Pass12345</div>
+<div>
+	Confirm Password: Pass1234</div>
+</td><td><p>
+	Error message regarding the incorrect fields</p>
+<p>
+	User is not registered</p>
+<p>
+	After error messages, the user is returned to the form</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h2 class='doclevel'>1.4.Test Suite : Log in</h2>
+<div><p>
+	Check if the user can log</p>
+</div><a name="toc_tc130845"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-58: Log in using valid credentials&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Check if the user can log in with valid credentials</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	Internet connection</p>
+<p>
+	Virtual cards is installed</p>
+<p>
+	User should have an account&nbsp;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Open Virtual Cards app and go to the &#39;Log in&#39; section</p>
+</td><td><p>
+	Log in form is available</p>
+</td></tr><tr><td width="5">3</td><td><p>
+	Complete the form with valid data:</p>
+</td><td><p>
+	A registered user is allowed to login with username and password without encountering any errors</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc130850"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-59: Mandatory fields&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Check the login functionality by leaving the password field empty</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Open Virtual cards and go to the &#39;Log in&#39; page</p>
+</td><td><p>
+	&#39;Log in&#39; form is available</p>
+</td></tr><tr><td width="5">2</td><td><p>
+	In the form, enter an valid email address and leave the password field empty:</p>
+</td><td><p>
+	Error message regarding the invalid password</p>
+<p>
+	User is not logged in</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc130855"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-60: Log in  using invalid credentials&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Check if the user can log in with invalid credentials</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Open Virtual cards and go to Log in section</p>
+</td><td><p>
+	Log in form is available</p>
+</td></tr><tr><td width="5">3</td><td><p>
+	Enter invalid data in the form</p>
+</td><td><div>
+	An error message should appear (&quot;Invalid credentials&quot;)</div>
+<div>
+	The user is not logged in</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc130860"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-61: Log out&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Check if the user can log out</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	User should have an account</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Go to Log in section</p>
+</td><td><p>
+	Log in form is available</p>
+</td></tr><tr><td width="5">2</td><td><p>
+	Log in with valid credentials</p>
+</td><td><p>
+	The user is logged in</p>
+</td></tr><tr><td width="5">4</td><td><p>
+	From the main menu, select &#39;Log out&#39;</p>
+</td><td><div>
+	The user is logged out</div>
+<div>
+	Any saved cards are removed from the list</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h2 class='doclevel'>1.5.Test Suite : Add cards</h2>
+<div><p>
+	Check if the user can save personal cards</p>
+</div><a name="toc_tc130908"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-62: Add existing plastic card by scanning the barcode&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Check if the user can save existing plastic in the app</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	Virtual cards is installed</p>
+<p>
+	Existing loyalty card</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Open Virtual Cards, then tap on &#39;Add card&#39;</p>
+</td><td><p>
+	&#39;Add card&#39; page opens</p>
+</td></tr><tr><td width="5">2</td><td><p>
+	Select the store for the existing loyalty card (e.g Sensiblue, Ecco)</p>
+</td><td><p>
+	The user has the possibily to save the barcode for the existing plastic card</p>
+</td></tr><tr><td width="5">3</td><td><p>
+	Select &#39;Scan the barcode&#39;</p>
+</td><td><p>
+	The photo camera launches and the barcode can be scanned&nbsp;</p>
+</td></tr><tr><td width="5">4</td><td><p>
+	Scan the barcode</p>
+</td><td><p>
+	Confirmation message the the card is successfully saved</p>
+<p>
+	The card is added to the list of personal cards</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc130915"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-63: Add virtual card using valid data&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Check if the user can add virtual card by filling the form with valid data</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Open Virtual Cards and select &#39;Add card&#39;</p>
+</td><td><p>
+	&#39;Add card&#39; page opens</p>
+</td></tr><tr><td width="5">2</td><td><p>
+	Select a store in order to request a new loyalty card (Profi, DM)</p>
+</td><td><p>
+	A new form is availble</p>
+</td></tr><tr><td width="5">3</td><td><p>
+	Fill in the form fields with valid data</p>
+<div>
+	Name: Corina&nbsp;</div>
+<div>
+	Last Name: Radu</div>
+<div>
+	CNP: 2850912080104</div>
+<div>
+	Street: Lunga</div>
+<div>
+	Number:3</div>
+<div>
+	City: Brasov</div>
+<div>
+	District: Brasov</div>
+<div>
+	Phone:0741587192</div>
+<div>
+	Email: corinaradu12@gmail.com</div>
+<div>
+	Check agreement</div>
+<div>
+	&nbsp;</div>
+<div>
+	Select &#39;Generate&#39;</div>
+</td><td><p>
+	Confirmation message&nbsp;</p>
+<p>
+	The card is added to the list of personal cards</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc130920"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-64: Mandatory fields&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Check the mandatory fields by leaving them empty</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Open Virtual cards and select &#39;Add card&#39;</p>
+</td><td><p>
+	&#39;Add card&#39; page opens</p>
+</td></tr><tr><td width="5">2</td><td><p>
+	Select a store in order to request a new loyalty card (Profi, DM)</p>
+</td><td><p>
+	A new form is available</p>
+</td></tr><tr><td width="5">3</td><td><p>
+	Enter no data in the form and select &#39;Generate&#39;</p>
+</td><td><p>
+	Error regarding the mandatory fields</p>
+<p>
+	Mandatory fields are displayed in a distinctive way than the non-mandatory fields</p>
+<p>
+	Card is not added to the list of personal cards</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h2 class='doclevel'>1.6.Test Suite : Remove card</h2>
+<div><p>
+	Check if the user can&nbsp;delete a previously saved card</p>
+</div><a name="toc_tc130926"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-65: Remove a previously saved card&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Check if the user can remove cards</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	Add least one card is added</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Open Virtual cards and go to the &#39;Cards&#39; section</p>
+</td><td><p>
+	The list of saved cards is available</p>
+</td></tr><tr><td width="5">2</td><td><p>
+	Select one of the previously saved cards</p>
+</td><td><p>
+	Details of the card are displayed</p>
+<p>
+	The application provides a way to delete the card</p>
+</td></tr><tr><td width="5">3</td><td><p>
+	Go to &#39;More options&#39; icon (3 vertical dots) and select &#39;Delete card&#39;</p>
+</td><td><p>
+	Confirmation message (Are you sure&nbsp; you want to delete the card)</p>
+</td></tr><tr><td width="5">4</td><td><p>
+	Confirm with &#39;Ok&#39;</p>
+</td><td><p>
+	The card is deleted form the list of personal cards</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h2 class='doclevel'>1.7.Test Suite : Search card</h2>
+<div><p>
+	Check if the cards are easy to find</p>
+</div><a name="toc_tc130933"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-66: Search card using the alphabet anchors&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Check if the user can find a&nbsp; card using the alphabet anchors</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Open Virtual Cards and go to the &#39;Add cards&#39; page</p>
+</td><td><p>
+	The list of all available cards is displayed&nbsp;in alphabetical order</p>
+<p>
+	Alphabet anchors are available</p>
+</td></tr><tr><td width="5">2</td><td><p>
+	Select different letters from the alphabet anchors (a, f, x)</p>
+</td><td><p>
+	The anchor links work properly</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc130937"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-67: Search field in the 'Add card' section&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Check the Search feature in the main list of all available cards by&nbsp; entering card&#39;s name (or parts of it) in the search field</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Open Virtual Cards and go to &#39;Add card section&#39;</p>
+</td><td><p>
+	The list of all available cards is displayed&nbsp;in alphabetical order</p>
+<p>
+	Search option is available (magnifying glass symbol)</p>
+</td></tr><tr><td width="5">2</td><td><p>
+	In the Search field, enter&nbsp;card&#39;s name (or parts of it) e.g. Ecco, d, no</p>
+</td><td><p>
+	The user should be able to find a card by filtering by name</p>
+<p>
+	Only cards matching the input from the search field are displayed</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc130942"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-68: Search functionality in the saved cards section&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	At least 2 cards saved in the &#39;Cards&#39; section</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Open Virtual Cards and go to &#39;Cards&#39; section</p>
+</td><td><p>
+	Previously saved cards are displayed</p>
+</td></tr><tr><td width="5">2</td><td><p>
+	In the Search field, enter card&#39;s name (or parts of it) e.g. Sen, a, n</p>
+</td><td><p>
+	Only cards matching the input from the search field are displayed</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h2 class='doclevel'>1.8.Test Suite : Uninstall</h2>
+<div><p>
+	Check if the application can be uninstalled</p>
+</div><a name="toc_tc130947"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case BVFPQA01-69: Uninstall Virtual Cards&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">corina.radu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Check if the application can be uninstalled</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	Virtual cards must be installed</p>
+<p>
+	Internet connection</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	Long tap the Virtual Cards logo from Application Manager&nbsp;</p>
+</td><td><p>
+	Uninstall option is available</p>
+</td></tr><tr><td width="5">2</td><td><p>
+	Select &#39;Uninstall&#39;</p>
+</td><td><p>
+	The application can be uninstalled in a reasonable amount of time&nbsp;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+
+</body>
+</html>
